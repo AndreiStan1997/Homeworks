@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Contact Form</title>
+
+	<style>
+        .contact{
+            border: 4px;
+            border-color: blueviolet;
+            width: 100%;
+            height: 100%;
+        }
+        .success{
+            display: none;
+            width: 30%;
+            height: 30%;
+            background-color: rgb(114, 190, 114);
+            color: green;
+        }
+        .logo{
+            position: fixed;
+            left: 200px;
+            top: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="success" id="success">
+        <p>Thank you for contacting us, Andrei <button id="close" onclick="closeBaner()">X</button></p>
+    </div>
+    <img class="logo" src="imagine.jpg" alt="logo" width="200px" height="200px">
+	<form class="contact" name="myForm" onsubmit="return validateForm()" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John" onchange="inputChangeFirstName()"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe" onchange="inputChangeLastName()"><br><br>
+        <br>
+        <p>Gender</p>
+        <input type="radio" id="M" name="fav_language" value="M" checked>
+        <label for="M">M</label><br>
+        <input type="radio" id="F" name="fav_language" value="F">
+        <label for="F">F</label><br>
+        <textarea></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="Script.js"></script>
+</body>
+
+</html>
